@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 57px;
+    padding-bottom: 33px;
+}
+.nav-left-h6{
+    color: #393939;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.nav-center{
+    display: none;
+}
+.nav-left ul{
+    display: flex;
+    gap: 53px;
+    align-items: center;
+    list-style: none;
+}
+.nav-left ul li a{
+    text-decoration: none;
+    color: #393939;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.nav-left ul li:nth-child(5){
+    text-align: center;
+    width: 100px;
+    border-radius: 8px;
+    background: #407F55;
+   padding: 10px 16px;
+   color: white;
+}
+.nav-left ul li:nth-child(5)>a{
+    color: white;
+}
+.nav-left ul li:nth-child(6){
+    text-align: center;
+    width: 100px;
+    border-radius: 8px;
+    background: #FB9C46;;
+   padding: 10px 16px;
+   color: white;
+}
+.nav-left ul li:nth-child(6)>a{
+    color: white;
+}
+.nav-left ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#FB9C46 ;
+    display: block;
+    margin: auto;
+    transition: 2s;
+}
+.nav-left ul li:hover::after{
+    width: 80%;
+}
+.nav-left ul li a:hover{
+    color: #FB9C46;
+    
+}
+.linear{
+    width: 100%;
+    height: 1px;
+    background-color: #C4C4C4;
+    margin-bottom: 32px;
+}
+.header{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    gap: 20px;
+    justify-content: space-between;
+}
+.header-left-p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 37px;
+}
+.header-left-p p{
+    color: #FB9C46;
+    font-family: Poppins;
+    font-weight: 600;
+}
+.header-left-p input{
+    border: none;
+    width: 100px;
+    height: 2px;
+    background-color: #FB9C46;
+}
+.header-left-p input:hover{
+    width: 100px;
+    border: none;
+    height: 1%;
+    background-color: #FB9C46;
+   
+}
+.h1{
+    width: 650px;
+    color: #000;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 76.8px */
+    letter-spacing: 1.68px;
+    margin-bottom: 44px;
+}
+.pi{
+    max-width: 590px;
+    color: #6C6C6C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 27px;
+}
+.header-button{
+    border-radius: 16px;
+    background: #058E6E;
+    box-shadow: 0px 3.849479913711548px 3.623039960861206px 0px rgba(64, 127, 85, 0.03), 0px 10.643319129943848px 10.017241477966309px 0px
+     rgba(64, 127, 85, 0.04), 0px 25.625011444091797px 24.117658615112305px 0px rgba(64, 127, 85, 0.05), 0px 85px 80px 0px rgba(64, 127, 85, 0.08);
+     width: 290px;
+    height: 62px;
+    padding: 10px 16px;
+    text-align: center;
+}
+.header-button a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+header{
+    width: 100%;
+    position: relative;
+}
+.header-right-ellips{
+    width: 462px;
+    height: 625px;
+    background-color: #FB9C46;
+    border-radius: 200px;
+}
+.header-right-img1{
+
+    border-radius: 0 0 200px 200px;
+    margin-bottom: 0;
+    position: absolute; 
+    top: 170px;  
+
+}
+.header-right-img2{
+    position: absolute;
+    top: 270px;
+    /* right: 0px; */
+    left: 1050px;
+
+}
+.header-right-img3{
+    position: absolute;
+    top: 500px;
+    right: 300px;
+    
+}
+.header-right-img4{
+    position: absolute;
+    top: 180px;
+    right: 350px;
+    
+}
+.header-group{
+    padding-top: 14px ;
+    padding-bottom: 14px;
+    height: 122px;
+    position: absolute;
+    top: 600px;
+    border-radius: 21px;
+    background: #FFF;
+    
+
+    
+}
+.g-1{
+    position:relative;
+}
+.g-2{
+    position: relative;
+    right: 20px;
+}
+.g-3{
+    position: relative;
+    right: 45px;
+}
+.g-4{
+    position: relative;
+    right: 65px;
+}
+.g-5{
+    position: relative;
+    top: -5px;
+    right: -130px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+
+}
