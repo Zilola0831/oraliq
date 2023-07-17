@@ -29,11 +29,18 @@ nav{
 .nav-center{
     display: none;
 }
+.list{
+    display: none;
+}
+.nav-right{
+    max-width: 800px;
+}
 .nav-right ul{
     display: flex;
     gap: 53px;
     align-items: center;
     list-style: none;
+    flex-wrap: wrap;
 }
 .nav-right ul li a{
     text-decoration: none;
@@ -113,7 +120,8 @@ nav{
     width: 100px;
     border: none;
     height: 1%;
-    background-color: #FB9C46;
+    outline: none;
+    background-color: #efece8;
    
 }
 .h1{
@@ -190,7 +198,8 @@ header{
     
 }
 .header-group{
-    box-shadow: 2px 2px 2px 2px gray;
+    filter: drop-shadow(0px 0.5008620619773865px 44.70193862915039px rgba(255, 146, 47, 0.08)) drop-shadow(0px 4px 357px rgba(255, 146, 47, 0.15));
+
     padding-top: 14px ;
     padding-bottom: 14px;
     padding-left: 20px;
@@ -243,6 +252,7 @@ header{
 }
 
 /* FLAG */
+
 .flag{
     margin-bottom: 90px;
 }
@@ -279,12 +289,36 @@ header{
 }
 .flag-img{
     display: flex;
+    gap: 10px;
     flex-wrap: wrap;
+    position: relative;  
 }
-.flag-img img{
-    border-radius: 0 400px 400px 0;
-    max-width: 95px;
+.flag-img img{  
+    height: 0px;
+    /* display: none; */
 }
+.flag-right input{
+    display: none;
+} 
+.flag-img>p{
+    color: #FB9C46;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* .check{
+    position: absolute;
+    left: 600px;
+    top: 20px;
+} */
+#check:checked+.flag-img img{
+    height: 60px;
+    width: 60px;
+    transition: 2s;
+
+}
+
 
 /* -----LESS0NS------- */
 
@@ -446,16 +480,20 @@ header{
 
 .practice{
     display: flex;
-    gap: 86px;
     justify-content: space-between;
     margin-bottom: 111px;
     flex-wrap: wrap;
-
+}
+.practice1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 111px;
+    flex-wrap: wrap;
 }
 .practice-left{
     position: relative;
-    width: 568px;
-    height: 512px; 
+    max-width: 568px;
+    max-height: 512px; 
 }
 .practice-ellips{
     width: 400px;
@@ -481,7 +519,18 @@ header{
 .practice-right{
     max-width: 530px;
 }
+.practice-right1{
+    max-width: 530px;
+}
 .practice-right>p{
+    color: #6C6C6C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+    margin-bottom: 10px;
+}
+.practice-right1>p{
     color: #6C6C6C;
     font-size: 18px;
     font-style: normal;
@@ -520,7 +569,7 @@ header{
 }
 @media screen and (max-width:467px) {
     .container{
-        max-width: 417px;
+        max-width: 360px;
     }
     nav{
         padding-top: 34px;
@@ -544,6 +593,15 @@ header{
     margin: 0 auto;
     margin-bottom: 71px;
    }
+   #list:checked+.nav-right{
+    display: flex;
+    width: 100%;
+   }
+   .nav-right ul li{
+    width: 300px;
+    margin: 0 auto;
+   }
+
    .header-right{
     margin: 0 auto;
    }
@@ -610,6 +668,15 @@ header{
    .flag-left h2{
     font-size: 32px;
    }
+   .flag-img{
+    gap: 28px;
+   }
+   #check:checked+.flag-img img{
+    height: 50px;
+    width: 50px;
+    transition: 2s;
+
+}
    /* -------lesson ----------*/
    .lesson-left h3{
     font-size: 30px;
@@ -627,20 +694,20 @@ header{
     margin: 0 auto;
    }
    .lesson-linear{
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 270px;
+    max-height: 270px;
     margin: 0 auto;
    }
    .lesson-ellips{
-    max-width: 220px;
-    max-height: 220px;
-    top: 40px;
-    left: 40px;
+    max-width: 200px;
+    max-height: 200px;
+    top: 35px;
+    left: 35px;
    }
    .lesson-right-img1{
-    max-width: 200px;
-    top: 30px;
-    border-radius: 0 0 70px 100px;
+    max-width: 164px;
+    top: 15px;
+    border-radius: 0 0 40px 100px;
    }
    .lesson-graph{
     max-width: 35px;
@@ -660,11 +727,12 @@ header{
     top: 100px;
    }
    .lesson-right-img2{
-    max-width: 150px;
+    max-width: 35px;
     width: 100%;
+    border-radius: 50%;
     max-height: 150px;
-    top: 0px;
-    left: 208px;
+    top: 30px;
+    left: 220px;
    }
    .lesson-checked{
     max-width: 35px;
@@ -672,19 +740,24 @@ header{
     padding-top: 5px;
     padding-left: 9px;
     top: 200px;
-    left: 255px;
+    left: 240px;
    }
    .lesson-right-img3{
     right: 150px;
     width: 150px;
     height: 150px;
-    top: 180px;
+    top: 160px;
    } 
+   .lesson{
+    /* margin-bottom: 900px; */
+   }
 
    /* -----PRACTICE------ */
 
    .practice{
-
+    display: flex;
+    gap: 50px;
+    flex-direction: column-reverse;
    }
 
     .pr-h3{
@@ -701,7 +774,7 @@ header{
         max-height: 220px;
         display: flex;
         top: 0;
-        left: 40px;
+        left: -70px;
     }
     .practice-left{
         margin: 0 auto;
@@ -709,7 +782,7 @@ header{
     .practice-img{
         max-width: 240px;
         top: -35px;
-        left: 59px;
+        left: -69px;
 
     }
     .practice-box-right h3{
@@ -720,6 +793,7 @@ header{
         font-size: 10px;
     }
     .practice-right{
+        /* margin-top: -200px; */
        
     }
 
