@@ -307,11 +307,6 @@ header{
     font-weight: 400;
     line-height: normal;
 }
-/* .check{
-    position: absolute;
-    left: 600px;
-    top: 20px;
-} */
 #check:checked+.flag-img img{
     height: 60px;
     width: 60px;
@@ -475,16 +470,18 @@ header{
     top: 270px;
     right: 356px;
 }
+.lesson-p{
+    max-width: 300px;
+    font-size: 14px;
+    color: #393939;
+    font-style: normal;
+    font-weight: 600;
+
+}
 
 /* ----PRACTICE------ */
 
 .practice{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 111px;
-    flex-wrap: wrap;
-}
-.practice1{
     display: flex;
     justify-content: space-between;
     margin-bottom: 111px;
@@ -505,7 +502,8 @@ header{
 }
 .practice-img{
     position: absolute;
-    top: 0px;
+    top: 18px;
+    border-radius: 0 0 0 40px;
 }
 .practice-right>h3{
     color: #393939;
@@ -519,18 +517,7 @@ header{
 .practice-right{
     max-width: 530px;
 }
-.practice-right1{
-    max-width: 530px;
-}
 .practice-right>p{
-    color: #6C6C6C;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 28.8px */
-    margin-bottom: 10px;
-}
-.practice-right1>p{
     color: #6C6C6C;
     font-size: 18px;
     font-style: normal;
@@ -552,20 +539,99 @@ header{
     background: #FFF;
     box-shadow: 0px -2px 128px 0px rgba(5, 142, 110, 0.14);
 }
-.lesson-p{
-    max-width: 300px;
-    font-size: 14px;
-    color: #393939;
-    font-style: normal;
-    font-weight: 600;
-
-}
 .practice-box-right p:nth-child(2){
     color: #8D8D8D;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 22.4px */
+}
+
+/* WORK */
+
+.work{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 111px;
+    /* gap: 75px; */
+    /* align-items: flex-end; */
+    flex-wrap: wrap; 
+}
+.work-left{
+    max-width: 629px;
+}
+.work-left>p{
+    color: #6C6C6C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+    margin-bottom: 10px;
+}
+.work-left>h3{
+    color: #393939;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 57.6px */
+    letter-spacing: 1.26px;
+    margin-bottom: 20px;
+}
+.work-left-boxs{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.work-left-box{
+    max-width: 600px;
+    display: flex;
+    padding-top: 16px;
+    padding-left: 23px;
+    padding-bottom: 23px;
+    align-items: center;
+    gap: 35px;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 0px 0.5008620619773865px 44.70193862915039px 0px rgba(255, 146, 47, 0.08), 0px 4px 357px 0px rgba(255, 146, 47, 0.15);
+}
+.work-box-right{
+    color: #393939;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 170%;
+}
+.work-right{
+    max-width: 500px;
+    position: relative;
+}
+.svg2{
+    display: none;
+}
+.svg{
+    position: absolute;
+    top: 250px;
+    left: 290px;
+}
+.svg1{
+    position: absolute;
+    top: 150px;
+    left: 180px;
+}
+.svg1 label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+#work{
+    display: none;
+}
+.work-linear{
+    max-width: 136px;
+    height: 10px;
+    background: #0d0992;
+    position: absolute;
+    left: 60px;
 }
 @media screen and (max-width:467px) {
     .container{
@@ -774,15 +840,20 @@ header{
         max-height: 220px;
         display: flex;
         top: 0;
-        left: -70px;
+        left: -100px;
     }
     .practice-left{
         margin: 0 auto;
     }
+    .practice-right h3{
+        font-size: 30px;
+
+    }
     .practice-img{
         max-width: 240px;
-        top: -35px;
+        top: -31px;
         left: -69px;
+        border-radius: 0 0 0 20px;
 
     }
     .practice-box-right h3{
@@ -792,9 +863,47 @@ header{
     .practice-box-right p{
         font-size: 10px;
     }
-    .practice-right{
-        /* margin-top: -200px; */
-       
+    .practice-left{
+        margin-bottom: 160px;
+    }
+
+    /* ----WORK----- */
+
+    .work-right img{
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .svg{
+        display: none;
+    }
+    .work-right{
+        margin: 0 auto;
+        position: relative;
+    }
+    .svg1{
+        top: 80px;
+        left: 120px;
+    }
+    .work-left{
+        margin-bottom: 56px;
+    }
+    .svg2{
+        display: block;
+        position: absolute;
+        top: 150px;
+        left: 180px;
+    }
+    .work-left>h3{
+        font-size: 30px;
+    }
+    .work-left>p{
+        font-size: 12px;
+        line-height: 200%;
+    }
+    .work-box-right{
+        font-size: 10px;
+        color: #393939;
     }
 
 }
